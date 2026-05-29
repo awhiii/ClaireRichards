@@ -139,6 +139,11 @@ img { display: block; }
   white-space: nowrap;
 }
 
+#email-icon {
+  transform: translateY(-0.3px) scale(0.91);
+  transform-origin: center;
+}
+
 /* =========================================================
    INFO / MOBILE
 ========================================================= */
@@ -250,6 +255,12 @@ img { display: block; }
   white-space: nowrap;
 }
 
+#email-icon {
+  transform: translateY(-0.3px) scale(0.91);
+  transform-origin: center;
+}
+
+
 /* =========================================================
    WORKS / MOBILE
 ========================================================= */
@@ -312,6 +323,12 @@ img { display: block; }
   letter-spacing: -0.054em;
   white-space: nowrap;
 }
+
+#email-icon {
+  transform: translateY(-0.3px) scale(0.91);
+  transform-origin: center;
+}
+
 
 /* =========================================================
    VIDEO THUMBNAIL / MODAL
@@ -566,6 +583,11 @@ img { display: block; }
     height: 43px;
   }
 
+  #email-icon {
+    transform: translateY(-0.3px) scale(0.91);
+    transform-origin: center;
+  }
+
   /* ================= INFO / DESKTOP ================= */
 
   #info #page {
@@ -717,6 +739,11 @@ img { display: block; }
   height: 40px;
 }
 
+#email-icon {
+  transform: translateY(-0.5px) scale(0.91);
+  transform-origin: center;
+}
+
   /* ================= WORKS / DESKTOP ================= */
 
   #works #page {
@@ -808,4 +835,10 @@ img { display: block; }
     width: 44px;
     height: 44px;
   }
+
+  #email-icon {
+    transform: translateY(-1px) scale(0.91);
+    transform-origin: center;
+  }
+
 }
