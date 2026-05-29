@@ -1,0 +1,811 @@
+/* =========================================================
+   Claire Richards Portfolio
+   - HTML 구조를 쉽게 보려고 id 위주로 작성함
+   - 모바일 기본값 먼저 작성, 아래쪽 @media 안이 데스크탑
+   - 폰트: Helvetica / Styalista / Pretendard만 사용
+   - Styalista는 폰트 파일을 넣지 않았기 때문에, PC에 설치되어 있거나
+     직접 웹폰트를 연결해야 실제로 적용됨
+========================================================= */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+#page {
+  width: 1440px;
+  max-width: none;
+  min-height: 0;
+  margin: 0 auto;
+  background: #fff;
+  overflow: visible;
+  position: relative;
+}
+:root {
+  --paper: #ffffff;
+  --screen-bg: #e9e9e9;
+  --black: #050505;
+  --side: 27px;
+
+  --font-en: "Helvetica", sans-serif;
+  --font-kr: "Pretendard", sans-serif;
+  --font-logo: "Staylista", serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--black);
+  background: var(--screen-bg);
+  font-family: var(--font-en), var(--font-kr);
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: 0.6; }
+img { display: block; }
+
+/* 전체 모바일 종이 폭 */
+#page {
+  width: 100%;
+  max-width: 390px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+/* 공통 상단 */
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 77px var(--side) 0;
+}
+
+#logo {
+  font-family: var(--font-logo);
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+#menu {
+  display: flex;
+  gap: 31px;
+  align-items: center;
+}
+
+#menu a {
+  font-family: var(--font-en);
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+/* =========================================================
+   HOME / MOBILE
+========================================================= */
+
+#home-main {
+  position: relative;
+  padding: 43px var(--side) 0;
+}
+
+#home-title {
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1.26;
+  letter-spacing: -0.04em;
+}
+
+#home-image {
+  width: 226px;
+  height: auto;
+  margin: 19px 0 0 108px;
+}
+
+#home-text {
+  width: 190px;
+  margin: 17px 0 0 auto;
+  font-family: var(--font-en);
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+#home-footer {
+  padding: 41px 27px 11px;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+#social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+#footer-logo {
+  font-family: var(--font-logo);
+  font-size: 60px;
+  line-height: 0.82;
+  letter-spacing: -0.058em;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   INFO / MOBILE
+========================================================= */
+
+#info-main {
+  padding-top: 46px;
+}
+
+#profile {
+  padding: 0 var(--side);
+}
+
+#profile-photo {
+  width: 315px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#profile h1 {
+  margin: 18px 0 22px;
+  font-family: var(--font-en);
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 1.13;
+  letter-spacing: 0em;
+}
+
+#profile p {
+  max-width: 280px;
+  margin: -5px 0 18px;
+  font-family: var(--font-en), var(--font-kr);
+  font-size: 17px;
+  line-height: 1.3;
+  letter-spacing: 0em;
+}
+
+#info-list {
+  padding: 31px var(--side) 0;
+}
+
+#info-list h2 {
+  margin: 40px 0 22px;
+  font-family: var(--font-en);
+  font-size: 33px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0em;
+}
+
+#info-list h2:first-child {
+  margin-top: 0;
+  text-align: right;
+}
+
+#info-list h2:nth-of-type(3) {
+  margin-top: 65px;
+  text-align: right;
+}
+
+#info-list h2:nth-of-type(4) {
+  margin-top: 65px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.row span,
+.row p {
+  margin: 0px;
+  font-family: var(--font-en), var(--font-kr);
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0em;
+}
+
+.row p { text-align: right; }
+
+.row em {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--font-kr);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#more-awards {
+  margin: 0px 0px 28px;
+  text-align: right;
+  font-family: var(--font-kr);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#sub-footer {
+  padding: 44px 20px 14px var(--side);
+}
+
+#sub-footer #footer-logo{
+  font-size: 58px;
+  font-family: var(--font-logo);
+  font-size: 60px;
+  line-height: 0.82;
+  letter-spacing: -0.054em;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   WORKS / MOBILE
+========================================================= */
+
+#works-main {
+  padding: 35px 0 0;
+}
+
+#works-main h1 {
+  margin: 0 0 34px var(--side);
+  font-family: var(--font-en);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.work-card {
+  margin: 0 0 66px;
+  text-align: center;
+}
+
+.work-card img {
+  width: 100%;
+  height: auto;
+}
+
+.work-card p {
+  margin: 12px 0 0;
+  font-family: var(--font-en);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+#muzigae img {
+  width: 241px;
+  margin: 0 auto;
+}
+
+#muzigae h2 {
+  margin: -30px 0 6px;
+  font-family: var(--font-logo);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+#remind img {
+  width: 241px;
+  margin: 0 auto;
+}
+
+#sub-footer #footer-logo{
+  font-size: 58px;
+  font-family: var(--font-logo);
+  font-size: 60px;
+  line-height: 0.82;
+  letter-spacing: -0.054em;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   VIDEO THUMBNAIL / MODAL
+   - 모바일/데스크탑 공통
+========================================================= */
+
+.video-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+#video-frame {
+  width: min(92vw, 1280px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-thumb span {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-en);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.video-thumb:hover span {
+  opacity: 1;
+}
+
+/* 모바일은 hover가 없으니까 글자가 항상 너무 거슬리면 opacity 0 유지.
+   눌러서 재생만 되게 둠. */
+@media (max-width: 1023px) {
+  .video-thumb span {
+    font-size: 12px;
+  }
+}
+
+/* 영상 모달 */
+#video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.86);
+}
+
+#video-modal.is-open {
+  display: flex;
+}
+
+#video-player {
+  width: min(100%, 1080px);
+  max-height: 82vh;
+  background: #000;
+}
+
+#video-close {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 10000;
+
+  border: 0;
+  background: transparent;
+  color: #fff;
+
+  font-family: Helvetica, sans-serif;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#video-close:hover {
+  opacity: 0.6;
+}
+
+
+/* =========================================================
+   작은 모바일 보정
+========================================================= */
+
+@media (max-width: 374px) {
+  :root { --side: 24px; }
+  #home-title, #home-text { font-size: 29px; }
+  #home-image { width: 218px; margin-left: auto; }
+  #footer-logo { font-size: 55px; }
+  #profile-photo { width: 100%; }
+}
+
+/* =========================================================
+   DESKTOP
+   1024px 이상에서 데스크탑 디자인으로 변경
+========================================================= */
+
+/* =========================================================
+   DESKTOP
+   - 1440px 피그마 캔버스를 기준으로 배치
+   - 창이 작아지면 #page 전체가 scale로 같이 줄어듦
+   - 데스크탑 내부에서 글자/사진이 따로 움직이지 않음
+========================================================= */
+
+@media (min-width: 1024px) {
+  body {
+    background: #fff;
+    overflow-x: visible;
+  }
+
+  #desktop-scale {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  #page {
+    width: 1440px;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    background: #fff;
+    position: relative;
+    overflow: visible;
+  }
+
+  #top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px 0;
+  }
+
+  #logo {
+    font-size: 28px;
+    letter-spacing: 0em;
+  }
+
+  #menu {
+    display: flex;
+    gap: 58px;
+    align-items: center;
+  }
+
+  #menu a {
+    font-size: 26px;
+    letter-spacing: 0em;
+  }
+
+  /* ================= HOME / DESKTOP ================= */
+
+  #home #page {
+    height: 800px;
+    overflow: visible;
+  }
+
+  #home-main {
+    padding: 0;
+    position: static;
+  }
+
+  #home-title {
+    position: absolute;
+    left: 31px;
+    top: 360px;
+    margin: 0;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.13;
+    letter-spacing: 0.02em;
+  }
+
+  #home-image {
+    position: absolute;
+    right: 29px;
+    top: 150px;
+    width: 400px;
+    height: auto;
+    margin: 0;
+  }
+
+  #home-text {
+    position: absolute;
+    left: auto;
+    right: 460px;
+    top: 363px;
+    width: 150px;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+  
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -0.035em;
+    text-align: right;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  #home-footer {
+    position: absolute;
+    left: 32px;
+    bottom: 55px;
+    padding: 0;
+  }
+
+  #home-footer #footer-logo {
+    display: none;
+  }
+
+  #home-footer #social-icons {
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    gap: 18px;
+    margin: 0;
+  }
+
+  #home-footer #social-icons img {
+    width: 43px;
+    height: 43px;
+  }
+
+  /* ================= INFO / DESKTOP ================= */
+
+  #info #page {
+    height: 2048px;
+    overflow: visible;
+  }
+
+/* INFO 전체 영역은 좌표 고정용으로만 사용 */
+#info-main {
+  position: static;
+  padding: 0;
+}
+
+/* 프로필 사진 + 소개글 묶음 */
+#profile {
+  position: absolute;
+  left: 34px;
+  top: 135px;
+
+  display: grid;
+  grid-template-columns: 455px 560px;
+  gap: 56px;
+
+  width: 1110px;
+  padding: 0;
+}
+
+#profile-photo {
+  width: 455px;
+  height: auto;
+  margin: 0;
+}
+
+#profile-text {
+  width: 560px;
+}
+
+#profile h1 {
+  margin: 0 0 24px;
+
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
+
+#profile p {
+  width: 560px;
+  max-width: none;
+  margin: 0 0 28px;
+
+  font-size: 23px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* Awards / Education / Experience / Patents 전체 리스트 */
+#info-list {
+  position: absolute;
+  left: 545px;
+  top: 405px;
+
+  width: 680px;
+  margin: 0;
+  padding: 0;
+}
+
+#info-list h2,
+#info-list h2:first-child,
+#info-list h2:nth-of-type(3),
+#info-list h2:nth-of-type(4) {
+  margin: 48px 0 30px;
+
+  text-align: left;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+#info-list h2:first-child {
+  margin-top: 17%;
+}
+
+#info-list h2:nth-of-type(2),
+#info-list h2:nth-of-type(3),
+#info-list h2:nth-of-type(4) {
+  margin-top: 100px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+
+  margin-bottom: 46px;
+}
+
+.row span,
+.row p {
+  margin: 0;
+
+  font-size: 23px;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.row p {
+  text-align: left;
+}
+
+.row em {
+  display: block;
+  margin-top: 3px;
+
+  font-size: 19px;
+  line-height: 1.15;
+  font-style: normal;
+}
+
+#more-awards {
+  margin: -12px 0 58px 178px;
+
+  text-align: left;
+  font-size: 23px;
+}
+
+/* INFO 하단 아이콘 */
+#info #sub-footer {
+  position: absolute;
+  left: 34px;
+  bottom: 60px;
+  padding: 0;
+}
+
+#info #sub-footer #footer-logo {
+  display: none;
+}
+
+#info #social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  margin: 0;
+}
+
+#info #social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+  /* ================= WORKS / DESKTOP ================= */
+
+  #works #page {
+    height: 2048px;
+    overflow: visible;
+  }
+
+  #works #top {
+    padding: 28px 30px 0;
+  }
+
+  #works #logo {
+    font-size: 34px;
+  }
+
+  #works #menu {
+    gap: 58px;
+  }
+
+  #works #menu a {
+    font-size: 30px;
+  }
+
+  #works-main {
+    padding-top: 108px;
+  }
+
+  #works-main h1 {
+    display: none;
+  }
+
+  #works-main :nth-of-type(2),
+  #works-main :nth-of-type(3),
+  #works-main :nth-of-type(4),
+  #works-main :nth-of-type(5),
+  #works-main :nth-of-type(6){
+    padding-top: 5%;
+  }
+
+  .work-card {
+    width: 800px;
+    margin: 0 auto 132px;
+    text-align: center;
+  }
+
+  .work-card img {
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .work-card p {
+    margin: 12px 0 0;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+    text-align: center;
+  }
+
+  #muzigae {
+    margin-bottom: 132px;
+  }
+
+  #muzigae img {
+    width: 480px;
+  }
+
+  #remind img {
+    width: 480px;
+  }
+
+  #works #sub-footer {
+    padding: 0 0 34px;
+    text-align: center;
+  }
+
+  #works #sub-footer #footer-logo {
+    display: none;
+  }
+
+  #works #social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 0;
+  }
+
+  #works #social-icons img {
+    width: 44px;
+    height: 44px;
+  }
+}
