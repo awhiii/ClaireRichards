@@ -6,6 +6,13 @@
    - Styalista는 폰트 파일을 넣지 않았기 때문에, PC에 설치되어 있거나
      직접 웹폰트를 연결해야 실제로 적용됨
 ========================================================= */
+@font-face {
+  font-family: "Stalysta";
+  src: url("./assets/fonts/Stalysta.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
@@ -26,7 +33,7 @@
 
   --font-en: "Helvetica", sans-serif;
   --font-kr: "Pretendard", sans-serif;
-  --font-logo: "Staylista", serif;
+  --font-logo: "Stalysta", serif;
 }
 
 * { box-sizing: border-box; }
